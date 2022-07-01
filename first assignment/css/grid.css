@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.display_grid{
+display: grid;
+/* grid-template-columns: repeat(12,1fr); */
+}
+
+.grid_2_col{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid_3_col {
+    grid-template-columns:repeat(3,1fr);
+ 
+}
+
+.grid_4_col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid_5_col {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* row */
+
+.grid_2_row{
+    grid-template-rows:repeat(2, 1fr);
+}
+
+.grid_3_row{
+    grid-template-columns: repeat(3, 1fr);;
+}
