@@ -41,10 +41,17 @@ html{
 }
 
 h1,h2,h3,h4{
-    font-weight: 500;
-    color: hsl(var(--heading_color));
+    font-weight: 800;
+    color: hsl(var(--heading_color),.9);
 }
 
+/* click ables */
+.items_label,.header_icon,
+.customer_support button,.pro_icon,
+.notifications,.item_label img{
+    cursor: pointer;
+
+}
 
 p{
 font-size: 1.25rem;
@@ -188,7 +195,7 @@ margin-bottom: 2rem;
 
 .customer_support p {
     font-size: 1.3rem;
-margin-bottom: 2rem;
+margin-top: 2rem;
 text-align: left;
 }
 
@@ -200,6 +207,7 @@ text-align: left;
     border: 1px solid  rgb(142, 201, 243,.2);
     border-radius: 10px;
     color: hsl(var(--logoColor),.7);
+    margin-top: 3rem;
   
 }
 
@@ -229,14 +237,19 @@ margin-bottom: 0px;
     color: hsl(var(--logoColor), .8);
    
 }
-
+ 
+.notifications{
+    display: inline-block;
+    position: relative;
+}
 
 .profile .notifications-signal{
+
     color: red;    
 font-size: 4rem;
 position:absolute;
-top: -.2%;
-right: 16.2%;
+bottom: .8rem;
+left:.9999rem ;
 opacity: 1;
 }
 
@@ -274,18 +287,9 @@ margin: 0 auto;
      margin: 1rem 0 1.5rem 0;
 }
 
-progress{
-    
-    height: 1.8rem;
-    width: 20vw;
-   margin-left: 5%;
-   margin-top: 1.5rem;
 
-}
 
-progress div{
-    display: flex;
-}
+
 
 /* weekly paymenr */
 .weekly_payment{
@@ -318,6 +322,24 @@ progress div{
     width: 6vw;
 }
 /* recent activities */
+
+.progress{
+    display: flex;
+    align-items: center;
+}
+progress {
+
+    height: 2rem;
+    width: 20vw;
+    margin-left: 5%;
+    margin-top: .5rem;
+}
+
+.progress div p{
+position: relative;
+bottom: .7rem;
+left: 1rem;
+}
          .icon{
     font-size: 2rem;
     color: hsl(var(--logoColor));
@@ -349,6 +371,8 @@ padding-bottom: 0;
     display: block;
     width: 51.5vw;
     height:3.5rem ;
+    padding-left:5rem;
+    padding-right: 2rem;
 border-top-left-radius: 4rem;
 border-bottom-left-radius:4rem;
 border-top-right-radius: 4rem;
@@ -357,11 +381,12 @@ border-top-right-radius: 4rem;
 border: 1px solid hsl(var(--color),.4);
 outline: hsl(var(--color)),.8;
 margin-bottom: 2rem;
+color: hsl(var(--color));
 }
 
 .search::placeholder{
-color: hsl(var(--color),.6);
-padding-left:3rem ;
+color: hsl(var(--color),.3);
+
 
 }
 
@@ -384,8 +409,9 @@ padding-left:3rem ;
 
 }
 
-.recent_header h4{
+.recent_header h2{
     padding-left:1rem ;
+    /* color: hsl(var(--heading_color),.9); */
 }
 
 .icon_div {
@@ -395,7 +421,6 @@ padding-left:3rem ;
 .header_icon {
     font-size: 2.3rem;
     color: hsl(var(--logoColor), .7);
-    cursor: pointer;
 }
 
 .item_details img{
@@ -409,7 +434,7 @@ padding-left:3rem ;
     border-radius: 1rem;
 }
 
-.item_details h4{
+.item_details h3{
     color:hsl(var(--heading_color),.8);
     font-size: 1.5rem;
     text-align: center;
@@ -452,10 +477,11 @@ padding-top: 2rem;
 }
 
  tr{
-    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     border-bottom: 1px solid hsl(var(--color),.5);
     text-align: left;
-    height: 4rem;
+    height: 4.5rem;
 }
 
 table tr:first-child,table tr:last-child{
@@ -465,10 +491,30 @@ td:last-child{
     color: hsl(var(--heading_color));
 }
 td:first-child{
+    display: flex;
+    align-items: center;
         color: hsl(var(--heading_color),.8);
+        width: 20rem;
+}
+
+td:first-child,th:first-child {
+    width: 24rem;
 }
 
 table td,th{
     text-align: left;
-    padding: .95rem 0;
+    padding: .5rem ;
+}
+
+ .Icon{
+     display: block;
+   margin-right: 1rem;
+ 
+}
+.Icon_bg{
+    background-color: hsl(var(--logoColor), .1);
+    font-size: 2rem;
+    padding: .3rem;
+    border-radius: 3px;
+        color: hsl(var(--logoColor), .8);
 }
